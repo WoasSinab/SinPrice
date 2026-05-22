@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="app-header">
+        <h1 class="app-title">SinPrice</h1>
+        <div class="header-actions">
+          <div class="currency-switch" id="unit-toggle" title="Toggle IRR / USD">
+            <div class="switch-slider"></div>
+            <span class="switch-label active" id="label-toman">IRT</span>
+            <span class="switch-label" id="label-usd">USD</span>
+          </div>
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            LIVE
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs-nav">
+        <button class="tab-btn active" data-tab="main">Markets</button>
+        <button class="tab-btn" data-tab="crypto">Crypto</button>
+        <div class="tab-underline"></div>
+      </div>
+
+      <div class="tabs-content">
+        <div class="tab-panel active" id="tab-main">
+          <div class="crypto-card dollar">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">USD</span>
+                <span class="token-desc">US Dollar / Free Market</span>
+              </div>
+              <span id="dollar-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="dollar-price" class="main-price">...</span>
+                <span class="currency-unit" id="dollar-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="dollar-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card euro">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">EUR</span>
+                <span class="token-desc">Euro / Free Market</span>
+              </div>
+              <span id="euro-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="euro-price" class="main-price">...</span>
+                <span class="currency-unit" id="euro-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="euro-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card gold">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">GOLD 18K</span>
+                <span class="token-desc">Gold per Gram / Tehran</span>
+              </div>
+              <span id="gold-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="gold-price" class="main-price">...</span>
+                <span class="currency-unit" id="gold-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="gold-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card sekke-emami">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">SEKKE EMAMI</span>
+                <span class="token-desc">Emami Gold Coin</span>
+              </div>
+              <span id="emami-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="emami-price" class="main-price">...</span>
+                <span class="currency-unit" id="emami-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="emami-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-crypto">
+          <div class="crypto-card btc">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">BTC</span>
+                <span class="token-desc">Bitcoin</span>
+              </div>
+              <span id="btc-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="btc-price" class="main-price">...</span>
+                <span class="currency-unit" id="btc-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="btc-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card eth">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">ETH</span>
+                <span class="token-desc">Ethereum</span>
+              </div>
+              <span id="eth-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="eth-price" class="main-price">...</span>
+                <span class="currency-unit" id="eth-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="eth-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card usdt">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">USDT</span>
+                <span class="token-desc">Tether USD</span>
+              </div>
+              <span id="usdt-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="usdt-price" class="main-price">...</span>
+                <span class="currency-unit" id="usdt-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="usdt-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card sol">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">SOL</span>
+                <span class="token-desc">Solana</span>
+              </div>
+              <span id="sol-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="sol-price" class="main-price">...</span>
+                <span class="currency-unit" id="sol-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="sol-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="crypto-card xrp">
+            <div class="card-meta">
+              <div class="token-info">
+                <span class="token-name">XRP</span>
+                <span class="token-desc">Ripple</span>
+              </div>
+              <span id="xrp-trend" class="trend-badge">--%</span>
+            </div>
+            <div class="card-body">
+              <div class="price-wrapper">
+                <span id="xrp-price" class="main-price">...</span>
+                <span class="currency-unit" id="xrp-unit">IRT</span>
+              </div>
+              <div class="chart-wrapper">
+                <svg id="xrp-chart" class="sparkline" viewBox="0 0 100 30"></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-footer">
+        <span id="update-time" class="time-stamp">Updated: --:--</span>
+        <button id="refresh-btn" class="action-btn" title="Refresh Now">
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
