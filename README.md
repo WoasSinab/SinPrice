@@ -69,9 +69,3 @@ SinPrice/
 ├── style.css                         # Custom Neon Design System & Responsive Layouts
 ├── manifest.json                     # Extension Configuration (MV3)
 └── README.md                         # Project Documentation
-
-
-
-
-
-
